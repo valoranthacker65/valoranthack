@@ -1,0 +1,5 @@
+return {
+    {username = "username1", userId = 123456789},
+    {username = "username2", userId = 987654321},
+    {username = "username3", userId = 123987456},
+}
