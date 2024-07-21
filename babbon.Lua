@@ -17,17 +17,17 @@ local CloudKeybind = Enum.KeyCode.PageUp
 
 local CloudAimbot = true
 
-local DribbleToggle = true
+local DribbleToggle = false
 
 local DribbleKeybinds = {
-    ["Double Crossover"] = "n",
+    ["Double Crossover"] = "G",
     ["Behind Back"] = "B",
     ["Spin"] = "F",
     ["Back Hesi"] = "J",
     ["Snatchback"] = "Q",
     ["Under Side"] = "V",
-    ["Under Double"] = "K",
-    ["Double Behind The Back"] = "m",
+    ["Under Double"] = "Six",
+    ["Double Behind The Back"] = "",
 }
 
 local AutoBlocky = false -- I removed all this information 
