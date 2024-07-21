@@ -2,7 +2,6 @@ if Executed then
     return
 end
 
-
 --[[ Default settings
     Cloud Aimbot = true
     Macro = false
@@ -44,14 +43,13 @@ local MacroKeybinds = { -- I also removed all this information
 local function Dribble(move)
     return Rs.GameEvents.ClientAction:FireServer("Dribble Move", move)
 end
+
 game:GetService("UserInputService").InputBegan:Connect(function(key, typing)
     if not typing then
         if key.KeyCode == CloudKeybind then
             CloudAimbot = not CloudAimbot
         end
-        if key.KeyCode == Enum.KeyCode.Home then
-            DribbleToggle = not DribbleToggle
-        end
+      
         for _,v in next, DribbleKeybinds do
             if key.KeyCode == Enum.KeyCode[v] and DribbleToggle == true then
                 if _ == "Double Crossover" then
@@ -209,7 +207,6 @@ function OnCharacter()
         table.insert(Stats.ReleasePoints , Release)
         repeat task.wait() until Character:GetAttribute( 'LandedShotMeter' )
     end
-    
     
     function LoadAimbot( Character )
         Character:GetAttributeChangedSignal( 'Shooting' ):Connect(function()
