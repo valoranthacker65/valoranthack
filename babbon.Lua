@@ -20,14 +20,14 @@ local CloudAimbot = true
 local DribbleToggle = false
 
 local DribbleKeybinds = {
-    ["Double Crossover"] = "G",
+    ["Double Crossover"] = "n",
     ["Behind Back"] = "B",
     ["Spin"] = "F",
     ["Back Hesi"] = "J",
     ["Snatchback"] = "Q",
     ["Under Side"] = "V",
-    ["Under Double"] = "Six",
-    ["Double Behind The Back"] = "",
+    ["Under Double"] = "K",
+    ["Double Behind The Back"] = "m",
 }
 
 local AutoBlocky = false -- I removed all this information 
