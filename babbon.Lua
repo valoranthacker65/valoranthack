@@ -1,10 +1,8 @@
-if Executed then
-    return
-end
+
 
 --[[ Default settings
     Cloud Aimbot = true
-    Macro = false
+    Macro = true
     NetBoost = false
 ]]
 
@@ -17,40 +15,39 @@ local CloudKeybind = Enum.KeyCode.PageUp
 
 local CloudAimbot = true
 
-local DribbleToggle = false
+local DribbleToggle = true
 
 local DribbleKeybinds = {
-    ["Double Crossover"] = "G",
+    ["Double Crossover"] = "N",
     ["Behind Back"] = "B",
     ["Spin"] = "F",
     ["Back Hesi"] = "J",
-    ["Snatchback"] = "Q",
-    ["Under Side"] = "V",
-    ["Under Double"] = "Six",
-    ["Double Behind The Back"] = "",
+    ["Snatchback"] = "K",
+    ["Under Side"] = "C",
+    ["Under Double"] = "V",
+    ["Double Behind The Back"] = "M"
 }
 
-local AutoBlocky = false -- I removed all this information 
+local AutoBlocky = false -- I removed all thiaaaaas information 
 local AutoBlockyDelay = 0.1
 local AutoBlockyMethod = "2"
 
 local MacroToggle = false
 local MacroKeybinds = { -- I also removed all this information
     ["Backstep Floater"] = "T",
-    ["Quick Fade"] = "J", -- Reaper (the one who made this aka ME LOL???) if your reading this and wondering why you added this its because your a lazy fuck LOL
+    ["Quick Fade"] = "J" -- Reaper (the one who made this aka ME LOL???) if your reading this and wondering why you added this its because your a lazy fuck LOL
 } -- ^ also doesnt work LOL
 
 local function Dribble(move)
     return Rs.GameEvents.ClientAction:FireServer("Dribble Move", move)
 end
-
 game:GetService("UserInputService").InputBegan:Connect(function(key, typing)
     if not typing then
         if key.KeyCode == CloudKeybind then
             CloudAimbot = not CloudAimbot
         end
-      
-        for _,v in next, DribbleKeybinds do
+
+        for _, v in next, DribbleKeybinds do
             if key.KeyCode == Enum.KeyCode[v] and DribbleToggle == true then
                 if _ == "Double Crossover" then
                     if Lp.Character:GetAttribute("Handle") == "R" then
@@ -207,6 +204,7 @@ function OnCharacter()
         table.insert(Stats.ReleasePoints , Release)
         repeat task.wait() until Character:GetAttribute( 'LandedShotMeter' )
     end
+    
     
     function LoadAimbot( Character )
         Character:GetAttributeChangedSignal( 'Shooting' ):Connect(function()
