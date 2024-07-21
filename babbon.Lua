@@ -17,7 +17,7 @@ local CloudKeybind = Enum.KeyCode.PageUp
 
 local CloudAimbot = true
 
-local DribbleToggle = false
+local DribbleToggle = true
 
 local DribbleKeybinds = {
     ["Double Crossover"] = "n",
